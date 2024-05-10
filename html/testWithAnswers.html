@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Тестирование 1С:Профессионал</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+	<link rel="stylesheet" href="/css/testWithAnswers.css" />
+</head>
+<body>
+
+    <div class="container">
+        <section class="quiz-section">
+            <div class="quiz-box">
+
+                <div class="quiz-header">
+                    <div id="hud">
+                        <div class="hud-item">
+                             <h1 id="progressText" class="hud-prefix">
+                                Вопрос
+                             </h1>
+                             <div id="progressBar">
+                                <div id="progressBarFull"></div>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="home">
+                        <div class="items">
+                            <div class="back-home">
+                                <a href="/index.html" class="home-page"><i class='bx bx-home'></i></a>
+                            </div>
+                            <div class="theme">
+                                <a class="moon"><i class='bx bxs-moon toggle-icon'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="question-text">Какой ответ на вопрос?</h2>
+
+                <div class="option-list">
+                    <div class="option">
+                        <span>Этот</span>
+                    </div>
+                    <div class="option">
+                        <span>А может быть вот этот?...</span>
+                    </div>
+                    <div class="option">
+                        <span> Или этот?...</span>
+                    </div>
+                    <div class="option">
+                        <span>хм.......</span>
+                    </div>
+                    <div class="option">
+                        <span>хм.......</span>
+                    </div>
+                    <div class="option">
+                        <span>хм.......</span>
+                    </div>
+                </div>
+
+                <div class="quiz-footer">
+                    <button class="next-btn">Следующий вопрос</button>
+                </div>
+            </div>
+
+            <div class="result-box">
+                <h2>Результаты теста</h2>
+                <div class="percentage-container">
+                    <div class="circular-progress">
+                        <span class="progress-value">0%</span>
+                    </div>
+                    <span class="score-text">Вы ответили правильно на 0 из 5 вопросов</span>
+                </div>
+
+                <div class="buttons">
+                    <button class="tryAgain-btn">
+                        Начать заново
+                    </button>
+                    <a href="/html/category.html">
+                        <button class="anotherChapter-btn">
+                            Выбрать другой раздел
+                        </button>
+                    </a>
+                </div>    
+
+            </div>
+        </section>
+    </div>
+	<script src="/js/testWithAnswers.js"></script>
+</body>
+</html>

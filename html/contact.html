@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Связь 1С:Тест</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+    
+    <!-------------------------------------->
+               <!--  Ш А П К А  -->
+    <!-------------------------------------->
+
+    <header class="header">
+        <a href="#" class="logo">1С:Тест</a>
+
+        <nav class="navbar">
+            <a href="/index.html" style="--i:1;" class="active">Главная</a>
+            <a href="/index.html#test" style="--i:2;">Тест</a>
+            <a href="/index.html#exams" style="--i:3;">Экзамен</a>
+            <a href="/index.html#faqs" style="--i:4;">Вопросы</a>
+            <a href="/html/contact.html" style="--i:5;">Связь</a>
+        </nav>
+
+        <div class="social-media toggle">
+            <a style="--i:1;" class="moon"><i class='bx bxs-moon toggle-icon'></i></a>
+            <a href="#" style="--i:2;"><i class='bx bxs-heart-circle'></i></a>
+            <a href="#" style="--i:3;"><i class='bx bxs-joystick'></i></a>
+        </div>
+    </header>
+
+
+    <!-------------------------------------->
+             <!--  Ф О Р М А  -->
+    <!-------------------------------------->
+
+        <section class="contact">
+
+            <div class="col-1">
+                <div class="col-2">
+                    <img src="/image/contact-wave1.png" alt="">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col-4">
+                    <img src="/image/contact-wave2.png" alt="">
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="col-6">
+                    <img src="/image/contact-wave3.png" alt="">
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="col-8">
+                    <img src="/image/contact-wave4.png" alt="">
+                </div>
+            </div>
+
+                    <div class="form-wrapper">
+                        <div class="contact-heading">
+                            <h1>Оставьте обратную связь<span>!</span></h1>
+                            <p class="text">почта для обращений:
+                                <a href="mailto:taexayo24@gmail.com">taexayo24@gmail.com</a>
+                            </p>
+                        </div>
+
+                        <form action="#" method="post" id="form" class="contact-form">
+
+                            <div class="input-wrap">
+                                <input type="text" class="contact-input _req" id="form-first-name" autocomplete="off" name="firstName">
+                                <label>Имя</label>
+                                <i class="icon fa-solid fa-id-card"></i>
+                            </div>
+
+                            <div class="input-wrap">
+                                <input type="text" class="contact-input _req" id="form-last-name" autocomplete="off" name="lastName">
+                                <label>Фамилия</label>
+                                <i class="icon fa-solid fa-id-card"></i>
+                            </div>
+
+                            <div class="input-wrap w100">
+                                <input type="text" class="contact-input _req _email" id="form-email" autocomplete="off" name="email">
+                                <label>Почта</label>
+                                <i class="icon fa-solid fa-at"></i>
+                            </div>
+
+                            <div class="input-wrap textarea w100">
+                                <textarea name="message" class="contact-input _req" id="form-message" autocomplete="off"></textarea>
+                                <label>Сообщение</label>
+                                <i class="icon fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="contact-buttons">
+                                <button class="btn upload">
+                                    <span>
+                                        <i class="fa-solid fa-paperclip"> </i>
+                                        Прикрепить
+                                    </span>
+                                    <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image">
+                                </button>
+                                <input type="submit" value="Отправить" class="btn" >
+                            </div>
+                        </form>
+                    </div>
+           
+
+        </section>
+
+    <div class="black-line"></div>
+
+<script src="/js/contact.js"></script>
+</body>
+</html>
