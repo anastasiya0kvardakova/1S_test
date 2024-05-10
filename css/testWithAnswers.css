@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+:root {
+    --primary-color: #eaeaea;
+    --secondary-color: #222;
+    --blue-color: deepskyblue;
+    --pink-color: #e84393;
+    --purple-color: #9c31c0;
+    --white-color: #ffffff;
+    --text-black: #000;
+    --gradient: linear-gradient(to right, var(--blue-color), var(--pink-color));
+    --pink-border: rgb(237, 190, 237);
+}
+
+.dark-mode {
+    --white-color: #222;
+    --secondary-color: #fff;
+    --pink-border: rgba(237, 190, 237, 0.684);
+    background: linear-gradient(to top left, rgb(43, 105, 125), rgb(129, 39, 83));
+}
+
+body {
+	font-family: 'Forum', cursive;
+	font-size: 16px;
+	background: linear-gradient(to top left, rgb(0, 191, 255), rgb(232, 67, 147));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: 1.7rem;
+    color: var(--secondary-color);
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.quiz-section {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--white-color);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: 6px;
+}
+
+.quiz-section.active {
+    left: 0;
+}
+
+.quiz-section .quiz-box {
+    position: relative;
+    width: 700px;
+    background: transparent;
+    /*border: 2px solid #c40094;*/
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.quiz-box .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz-header span {
+    font-size:  18px;
+    font-weight: 500;
+}
+
+/* start hud */
+.hud-prefix{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.hud-main-text{
+    text-align: center;
+}
+
+.items {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.items a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.items a:hover {
+    border-color: var(--blue-color);
+    border-radius: 50%;
+}
+
+.items a i{
+    font-size: 24px;
+    color: var(--blue-color);
+    transform: rotate(-45deg);
+}
+
+.theme .moon {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.theme .moon:hover {
+    border-color: goldenrod;
+}
+
+.theme .moon .bxs-moon {
+    color: goldenrod;
+}
+
+/* end hud */
+
+/* start ProgressBar */
+#progressBar{
+    width: 17rem;
+    height: 15px;
+    border: 0.1rem solid rgb(33, 218, 89);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull{
+    height: 100%;
+    background: linear-gradient(90deg, rgb(33, 218, 89)0%, rgb(43, 255, 19)100%);
+    width: 0%;
+}
+/* end ProgressBar */
+
+.quiz-box .question-text {
+    font-size: 1.5rem;
+	padding: 12px 0;
+	text-align: center;
+	margin: 0;
+}
+
+.option-list .option {
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid var(--pink-border);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 0 10px 10px;
+}
+
+.option-list .option:hover{
+    transition: transform 150ms;
+    transform: scale(1.005);
+}
+
+.option-list .option.correct {
+    background: rgba(43, 168, 31, 0.69);
+    color: rgb(255, 255, 255);
+    border-color: rgb(42, 168, 31);
+}
+
+.option-list .option.correct:hover {
+    background: rgba(43, 168, 31, 0.69);
+    border-color: rgb(42, 168, 31);
+}
+
+.option-list .option.incorrect {
+    background: rgba(192, 20, 20, 0.69);
+    color: rgb(255, 255, 255);
+    border-color: rgb(192, 20, 20);
+}
+
+.option-list .option.incorrect:hover {
+    background: rgba(192, 20, 20, 0.69);
+    border-color: rgb(192, 20, 20);
+}
+
+.option-list .option.disabled { 
+    pointer-events: none;
+}
+
+.option-list .option:hover {
+    background: rgba(237, 190, 237, 0.364);
+    border-color: var(--pink-border);
+}
+
+.quiz-box .quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.quiz-footer .next-btn {
+	background: linear-gradient(90deg, rgba(93, 77, 90, 0.7)0%,rgba(70, 99, 98, 0.7))100%;
+	color: #fff;
+	border: none;
+	display: block;
+	width: 100%;
+    border-radius: 6px;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-family: inherit;
+    padding:  10px 30px;
+    outline: none;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.quiz-footer .next-btn.active {
+    pointer-events: auto;
+    background: rgb(232, 67, 147);
+    color: #fff;
+}
+
+.quiz-footer .next-btn.active:hover {
+	cursor: pointer;
+	/*background-color: #9a3cc2;*/
+	transition: transform 150ms;
+    transform: scale(1.02);
+}
+
+.quiz-section .result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 700px;
+    background: transparent;
+    background: var(--white-color);
+    border-radius: 6px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz-section .result-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result-box h2 {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.result-box .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 40px;
+}
+
+.percentage-container .circular-progress {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(rgb(216, 49, 180) 3.6deg, rgba(255,255,255,0.1) 0deg);
+    border-radius: 50%;
+    border:  solid var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentage-container .circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: var(--white-color);
+    border-radius: 50%;
+}
+
+.circular-progress .progress-value {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.percentage-container .score-text {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttons button {
+    font-family: 'Forum', cursive;
+    width: 220px;
+    height: 47px;
+    background: linear-gradient(90deg, rgb(216, 49, 180)0%, rgb(11, 152, 147)100%);
+    outline: none;
+    border-radius: 6px;
+    border-color: var(--white-color);
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 30px 15px;
+    cursor: pointer;
+}
+
+.result-box .buttons{
+    display: flex;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+	/*background-color: #9a3cc2;*/
+	transition: transform 150ms;
+    transform: scale(1.05);
+}
